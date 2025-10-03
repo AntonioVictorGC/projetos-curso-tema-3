@@ -17,58 +17,59 @@ char estado1[50], estado2[50], codigo1[50], codigo2[50], nome1[50], nome2[50];
 int populacao1, populacao2, NPT1, NPT2, comparador, opcao;
 double area1, area2, PIB1, PIB2, pibpc1, pibpc2, densipop1, densipop2;
 
-/*conversão de tipos para float
-float pibpc1 = (float) PIB1 / populacao1;
-float pibpc2 = (float) PIB2 / populacao2;
-float densipop1 = (float) populacao1 / area1;
-float densipop2 = (float) populacao2 / area2;
+//valor em double para não perder casas decimais em divisões
+
+/*conversão de tipos para double
+pibpc1 = (double)PIB1 / populacao1;
+pibpc2 = (double)PIB2 / populacao2;
+densipop1 = (double)populacao1 / area1;
+densipop2 = (double)populacao2 / area2;
 estes cálculos foram movidos para depois da entrada dos dados*/
 
 //Entrada dos dados das cartas
 
 
 printf("Carta 1:\n");
-printf("Inicial do Estado (ex: C para Ceara): \n");
+printf("Inicial do Estado (ex: A para Amazonas): \n");
 scanf("%s", estado1);        
-printf("Codigo (ex: C01 ceara, cidade 01 ): \n");
+printf("Codigo (ex: A01 Amazonas, cidade 01 ): \n");
 scanf("%s", codigo1);    
 printf("Nome da Cidade: \n");
 scanf("%s", nome1);
-printf("Populacao: \n");
+printf("Populacao: (ex: 11401.06)\n");
 scanf("%d", &populacao1);
 printf("Area em km2: \n");
 scanf("%lf", &area1);
-printf("PIB: \n");
+printf("PIB: (**coloque o valor completo**)\n");
 scanf("%lf", &PIB1);
 printf("Numero de Pontos Turisticos: \n");
 scanf("%d", &NPT1);
 
 printf("Carta 2:\n");
-printf("Inicial do Estado (ex: C para Ceara): \n");
+printf("Inicial do Estado (ex: A para Amazonas): \n");
 scanf("%s", estado2);        
-printf("Codigo (ex: C01 ceara, cidade 01 ): \n");
+printf("Codigo (ex: A01 Amazonas, cidade 01 ): \n");
 scanf("%s", codigo2);    
 printf("Nome da Cidade: \n");
 scanf("%s", nome2);
-printf("Populacao: \n");
+printf("Populacao: (ex: 11401.06)\n");
 scanf("%d", &populacao2);
 printf("Area: \n");
 scanf("%lf", &area2);
-printf("PIB: \n");
+printf("PIB: (**coloque o valor completo**)\n");
 scanf("%lf", &PIB2);
 printf("Numero de Pontos Turisticos: \n");
 scanf("%d", &NPT2);
 
 printf("\n");
 
-//Cálculo de PIB per capita e Densidade Populacional
+/*Cálculo de PIB per capita e Densidade Populacional
+valor em double para não perder casas decimais em divisões*/
 
 pibpc1 = (double)PIB1 / populacao1;
 pibpc2 = (double)PIB2 / populacao2;
 densipop1 = (double)populacao1 / area1;
 densipop2 = (double)populacao2 / area2;
-
-//Atribuição dos valores calculados às variáveis correspondentes
 
 //Escolha do atributo para comparar
 
@@ -177,3 +178,4 @@ default:
 
 
 }
+
