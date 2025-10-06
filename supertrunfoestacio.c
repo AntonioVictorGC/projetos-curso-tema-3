@@ -30,9 +30,9 @@ estes cálculos foram movidos para depois da entrada dos dados*/
 
 
 printf("Carta 1:\n");
-printf("Inicial do Estado (ex: A para Amazon): \n");
+printf("Inicial do Estado (ex: A para Amazonas): \n");
 scanf("%s", estado1);        
-printf("Codigo (ex: A01 Amazonia, cidade 01 ): \n");
+printf("Codigo (ex: A01 Amazonas, cidade 01 ): \n");
 scanf("%s", codigo1);    
 printf("Nome da Cidade: \n");
 scanf("%s", nome1);
@@ -46,9 +46,9 @@ printf("Numero de Pontos Turisticos: \n");
 scanf("%d", &NPT1);
 
 printf("Carta 2:\n");
-printf("Inicial do Estado (ex: A para Amazonia): \n");
+printf("Inicial do Estado (ex: A para Amazonas): \n");
 scanf("%s", estado2);        
-printf("Codigo (ex: A01 Amazonia, cidade 01 ): \n");
+printf("Codigo (ex: A01 Amazonas, cidade 01 ): \n");
 scanf("%s", codigo2);    
 printf("Nome da Cidade: \n");
 scanf("%s", nome2);
@@ -198,4 +198,5 @@ default:
 
 
 }
+
 
