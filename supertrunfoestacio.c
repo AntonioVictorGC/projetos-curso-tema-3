@@ -8,16 +8,16 @@ Código: C01 (Inicia-se com a letra do estado representante + numero de 01 a 04 
 Nome da Cidade: Fortaleza
 População: 2400000 
 Área: 313.8 km²
-PIB: 7340000000 (7.34 bilhões)
+PIB: 73400000000000 (73.400 bilhões)
 NPT (Número de Pontos Turísticos): 8 
 pibpc (PIB per capita): PIB dividido pela população
 densipop (Densidade Populacional): População dividida pela área da cidade*/
 
 char estado1[50], estado2[50], codigo1[50], codigo2[50], nome1[50], nome2[50];
 int populacao1, populacao2, NPT1, NPT2, comparador, opcao;
-double area1, area2, PIB1, PIB2, pibpc1, pibpc2, densipop1, densipop2;
+double area1, area2, PIB1, PIB2, pibpc1, pibpc2, densipop1, densipop2, superpoder1, superpoder2;
 
-//valor em double para não perder casas decimais em divisões
+//valor em double para não perder casas decimais em divisões e para resolver um problema que estava ocorrendo nos calculos
 
 /*conversão de tipos para double
 pibpc1 = (double)PIB1 / populacao1;
@@ -30,9 +30,9 @@ estes cálculos foram movidos para depois da entrada dos dados*/
 
 
 printf("Carta 1:\n");
-printf("Inicial do Estado (ex: A para Amazonas): \n");
+printf("Inicial do Estado (ex: A para Amazon): \n");
 scanf("%s", estado1);        
-printf("Codigo (ex: A01 Amazonas, cidade 01 ): \n");
+printf("Codigo (ex: A01 Amazonia, cidade 01 ): \n");
 scanf("%s", codigo1);    
 printf("Nome da Cidade: \n");
 scanf("%s", nome1);
@@ -46,9 +46,9 @@ printf("Numero de Pontos Turisticos: \n");
 scanf("%d", &NPT1);
 
 printf("Carta 2:\n");
-printf("Inicial do Estado (ex: A para Amazonas): \n");
+printf("Inicial do Estado (ex: A para Amazonia): \n");
 scanf("%s", estado2);        
-printf("Codigo (ex: A01 Amazonas, cidade 01 ): \n");
+printf("Codigo (ex: A01 Amazonia, cidade 01 ): \n");
 scanf("%s", codigo2);    
 printf("Nome da Cidade: \n");
 scanf("%s", nome2);
@@ -71,9 +71,17 @@ pibpc2 = (double)PIB2 / populacao2;
 densipop1 = (double)populacao1 / area1;
 densipop2 = (double)populacao2 / area2;
 
+//calculo para super poder
+
+superpoder1 = (double)populacao1 + area1 + PIB1 + pibpc1 + (1.0 / densipop1);
+superpoder2 = (double)populacao2 + area2 + PIB2 + pibpc2 + (1.0 / densipop2);
+
+
+
 //Escolha do atributo para comparar
 
 printf("\n");
+
 printf("Escolha o atributo para comparar:\n");
 printf("1 - Populacao\n");
 printf("2 - Area\n");
@@ -81,6 +89,7 @@ printf("3 - PIB\n");
 printf("4 - Numero de Pontos Turisticos\n");
 printf("5 - PIB per capita\n");
 printf("6 - Densidade Populacional\n");
+printf("7 - Super poder\n");
 scanf("%d", &comparador);
 
 //Comparação dos atributos e declaração do vencedor
@@ -140,11 +149,22 @@ case 6:
         printf("Empate! Ambas as cartas possuem %.2lf habitantes por km2\n", densipop1);
     }
     break;
+case 7: 
+    if (superpoder1 > superpoder2){
+        printf("Carta 1 vence somando %.2lf de Super poder contra %.2lf de Super poder da carta 2\n", superpoder1, superpoder2);
+    } else if (superpoder2 > superpoder1){
+        printf("Carta 2 vence somando %.2lf de Super poder contra %.2lf de Super poder da carta 1\n", superpoder2, superpoder1);
+    } else {
+        printf("Empate! Ambas as cartas possuem %.2lf de Super poder\n", superpoder1);
+
+    }
+    break;
 
 default:
     printf("Atributo invalido!\n");
     break;
 }
+
 
 printf("\n");
 
@@ -160,11 +180,11 @@ switch (opcao)
 case 1:
     printf("essas foram as cartas comparadas:\n");
 
- printf("carta 1:\n estado: %s\n codigo: %s\n nome da cidade: %s\n populacao: %d\n area: %.2lf km2\n PIB: %.2lf de reais\n numero de pontos turisticos: %d\n PIB per capita: %.2lf\n Densidade populacional: %.2lf\n", estado1, codigo1, nome1, populacao1, area1, PIB1, NPT1, pibpc1, densipop1);
+ printf("carta 1:\n estado: %s\n codigo: %s\n nome da cidade: %s\n populacao: %d\n area: %.2lf km2\n PIB: %.2lf de reais\n numero de pontos turisticos: %d\n PIB per capita: %.2lf\n Densidade populacional: %.2lf\n Super poder: %.2lf\n", estado1, codigo1, nome1, populacao1, area1, PIB1, NPT1, pibpc1, densipop1, superpoder1);
 
  printf("\n");
 
- printf("carta 2:\n estado: %s\n codigo: %s\n nome da cidade: %s\n populacao: %d\n area: %.2lf km2\n PIB: %.2lf de reais\n numero de pontos turisticos: %d\n PIB per capita: %.2lf\n Densidade populacional: %.2lf\n", estado2, codigo2, nome2, populacao2, area2, PIB2, NPT2, pibpc2, densipop2);
+ printf("carta 2:\n estado: %s\n codigo: %s\n nome da cidade: %s\n populacao: %d\n area: %.2lf km2\n PIB: %.2lf de reais\n numero de pontos turisticos: %d\n PIB per capita: %.2lf\n Densidade populacional: %.2lf\n Super poder: %.2lf\n", estado2, codigo2, nome2, populacao2, area2, PIB2, NPT2, pibpc2, densipop2, superpoder2);
 
     break;
 case 2:
@@ -178,4 +198,3 @@ default:
 
 
 }
-
