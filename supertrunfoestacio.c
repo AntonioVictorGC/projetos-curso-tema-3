@@ -8,7 +8,7 @@ Código: C01 (Inicia-se com a letra do estado representante + numero de 01 a 04 
 Nome da Cidade: Fortaleza
 População: 2400000 
 Área: 313.8 km²
-PIB: 73400000000000 (73.400 bilhões)
+PIB: 73400000000000 (73.4 bilhões)
 NPT (Número de Pontos Turísticos): 8 
 pibpc (PIB per capita): PIB dividido pela população
 densipop (Densidade Populacional): População dividida pela área da cidade*/
@@ -198,3 +198,4 @@ default:
 
 
 }
+
