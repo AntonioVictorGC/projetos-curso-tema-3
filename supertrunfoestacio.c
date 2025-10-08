@@ -42,9 +42,9 @@ printf("\n");
     //Entrada dos dados das cartas
 
 printf("Carta 1:\n");
-printf("Inicial do Estado (ex: A para Amazonas): \n");
+printf("Estado (ex: Amazonas): \n");
 scanf("%s", estado1);        
-printf("Codigo (ex: A01 AmazonasC, cidade 01 ): \n");
+printf("Codigo (inicial + codigo de 1 a 4)ex: A01 Amazonas, cidade01 ): \n");
 scanf("%s", codigo1);    
 printf("Nome da Cidade: \n");
 scanf("%s", nome1);
@@ -52,15 +52,15 @@ printf("Populacao: (ex: 1200000)\n");
 scanf("%d", &populacao1);
 printf("Area: (ex: 23000.06)\n");
 scanf("%lf", &area1);
-printf("PIB: (coloque o valor simples. ex: 73.2)\n");
+printf("PIB: (coloque o valor simples. (ex: 73.200)\n");
 scanf("%lf", &PIB1);
 printf("Numero de Pontos Turisticos: \n");
 scanf("%d", &NPT1);
 
 printf("Carta 2:\n");
-printf("Inicial do Estado (ex: A para Amazonas): \n");
+printf("Estado (ex: Amazonas): \n");
 scanf("%s", estado2);        
-printf("Codigo (ex: A01 Amazonas, cidade 01 ): \n");
+printf("Codigo (inicial + codigo de 1 a 4)ex: A01 Amazonas, cidade01 ): \n");
 scanf("%s", codigo2);    
 printf("Nome da Cidade: \n");
 scanf("%s", nome2);
@@ -68,7 +68,7 @@ printf("Populacao: (ex: 1200000)\n");
 scanf("%d", &populacao2);
 printf("Area: (ex: 23000.06)\n");
 scanf("%lf", &area2);
-printf("PIB: (coloque o valor simples. ex: 73.2)\n");
+printf("PIB: (coloque o valor simples. (ex: 73.200)\n");
 scanf("%lf", &PIB2);
 printf("Numero de Pontos Turisticos: \n");
 scanf("%d", &NPT2);
@@ -125,11 +125,11 @@ case 2:
     break;
 case 3:
     if (PIB1 > PIB2){
-        printf("Carta 1 vence com %lf de reais contra %lf de reais da carta 2\n", PIB1, PIB2);
+        printf("Carta 1 vence com %.3lf bilhoes de reais contra %.3lf bilhoes de reais da carta 2\n", PIB1, PIB2);
     } else if (PIB2 > PIB1){
-        printf("Carta 2 vence com %lf de reais contra %lf de reais da carta 1\n", PIB2, PIB1);
+        printf("Carta 2 vence com %.3lf bilhos de reais contra %.3lf bilhoes de reais da carta 1\n", PIB2, PIB1);
     } else {
-        printf("Empate! Ambas as cartas possuem %lf de reais\n", PIB1);
+        printf("Empate! Ambas as cartas possuem %.3lf bilhoes de reais\n", PIB1);
     }
     break;
 case 4:
@@ -190,11 +190,11 @@ switch (opcao)
 case 1:
     printf("essas foram as cartas comparadas:\n");
 
- printf("carta 1:\n estado: %s\n codigo: %s\n nome da cidade: %s\n populacao: %d\n area: %.2lf km2\n PIB: %lf bilhoes de reais\n numero de pontos turisticos: %d\n PIB per capita: %.2lf\n Densidade populacional: %.2lf\n Super poder: %.2lf\n", estado1, codigo1, nome1, populacao1, area1, PIB1, NPT1, pibpc1, densipop1, superpoder1);
+ printf("carta 1:\n estado: %s\n codigo: %s\n nome da cidade: %s\n populacao: %d\n area: %.2lf km2\n PIB: %.3lf bilhoes de reais\n numero de pontos turisticos: %d\n PIB per capita: %.2lf\n Densidade populacional: %.2lf\n Super poder: %.2lf\n", estado1, codigo1, nome1, populacao1, area1, PIB1, NPT1, pibpc1, densipop1, superpoder1);
 
  printf("\n");
 
- printf("carta 2:\n estado: %s\n codigo: %s\n nome da cidade: %s\n populacao: %d\n area: %.2lf km2\n PIB: %lf bilhoes de reais\n numero de pontos turisticos: %d\n PIB per capita: %.2lf\n Densidade populacional: %.2lf\n Super poder: %.2lf\n", estado2, codigo2, nome2, populacao2, area2, PIB2, NPT2, pibpc2, densipop2, superpoder2);
+ printf("carta 2:\n estado: %s\n codigo: %s\n nome da cidade: %s\n populacao: %d\n area: %.2lf km2\n PIB: %.3lf bilhoes de reais\n numero de pontos turisticos: %d\n PIB per capita: %.2lf\n Densidade populacional: %.2lf\n Super poder: %.2lf\n", estado2, codigo2, nome2, populacao2, area2, PIB2, NPT2, pibpc2, densipop2, superpoder2);
 
     break;
 case 2:
@@ -216,9 +216,9 @@ printf("\n");
     //Entrada dos dados das cartas
 
 printf("Carta 1:\n");
-printf("Inicial do Estado (ex: A para Amazonas): \n");
+printf("Estado (ex: Amazonas): \n");
 scanf("%s", estado1);        
-printf("Codigo (ex: A01 AmazonasC, cidade 01 ): \n");
+printf("Codigo (inicial + codigo de 1 a 4)ex: A01 Amazonas, cidade01 ): \n");
 scanf("%s", codigo1);    
 printf("Nome da Cidade: \n");
 scanf("%s", nome1);
@@ -226,15 +226,15 @@ printf("Populacao: (ex: 1200000)\n");
 scanf("%d", &populacao1);
 printf("Area: (ex: 23000.06)\n");
 scanf("%lf", &area1);
-printf("PIB: (coloque o valor simples. ex: 73.2)\n");
+printf("PIB: (coloque o valor simples. (ex: 73.200)\n");
 scanf("%lf", &PIB1);
 printf("Numero de Pontos Turisticos: \n");
 scanf("%d", &NPT1);
 
 printf("Carta 2:\n");
-printf("Inicial do Estado (ex: A para Amazonas): \n");
+printf("Estado (ex: Amazonas): \n");
 scanf("%s", estado2);        
-printf("Codigo (ex: A01 Amazonas, cidade 01 ): \n");
+printf("Codigo (inicial + codigo de 1 a 4)ex: A01 Amazonas, cidade01 ): \n");
 scanf("%s", codigo2);    
 printf("Nome da Cidade: \n");
 scanf("%s", nome2);
@@ -242,7 +242,7 @@ printf("Populacao: (ex: 1200000)\n");
 scanf("%d", &populacao2);
 printf("Area: (ex: 23000.06)\n");
 scanf("%lf", &area2);
-printf("PIB: (coloque o valor simples. ex: 73.2)\n");
+printf("PIB: (coloque o valor simples. (ex: 73.200)\n");
 scanf("%lf", &PIB2);
 printf("Numero de Pontos Turisticos: \n");
 scanf("%d", &NPT2);
@@ -356,7 +356,7 @@ case 1:
 
  printf("\n");
 
- printf("carta 2:\n estado: %s\n codigo: %s\n nome da cidade: %s\n populacao: %d\n area: %.2lf km2\n PIB: %.lf bilhoes de reais\n numero de pontos turisticos: %d\n PIB per capita: %.2lf\n Densidade populacional: %.2lf\n Super poder: %.2lf\n", estado2, codigo2, nome2, populacao2, area2, PIB2, NPT2, pibpc2, densipop2, superpoder2);
+ printf("carta 2:\n estado: %s\n codigo: %s\n nome da cidade: %s\n populacao: %d\n area: %.2lf km2\n PIB: %.3lf bilhoes de reais\n numero de pontos turisticos: %d\n PIB per capita: %.2lf\n Densidade populacional: %.2lf\n Super poder: %.2lf\n", estado2, codigo2, nome2, populacao2, area2, PIB2, NPT2, pibpc2, densipop2, superpoder2);
 
     break;
 case 2:
@@ -412,3 +412,4 @@ default:
 
 
 }
+
