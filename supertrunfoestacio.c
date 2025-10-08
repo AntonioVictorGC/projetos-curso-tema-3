@@ -22,7 +22,7 @@ as variaveis "comparador1", "comparador2" e "comparador3" sao usadas no modo com
 
 //valor em double para não perder casas decimais em divisões e para resolver um problema que estava ocorrendo nos calculos
 
-//todos os calculos estao dentro do switch menu e suas variacoes para que nao ocorresse o erro nos calculos que estava ocorrendo  
+//todos os calculos estao dentro do switch menu e suas variacoes para que nao ocorresse o erro nos calculos que estavam ocorrendo  
 
 printf("menu do jogo\n");
 printf("1 - comparacao unica\n");
@@ -412,4 +412,5 @@ default:
 
 
 }
+
 
