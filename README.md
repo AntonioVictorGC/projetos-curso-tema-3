@@ -10,10 +10,12 @@ O usuario ainda no menu principal escolhe o modo de jogo
 
 Comparacao unica ou Comparacao multipla
 
-Comparacao unica
+Comparacao unica:
+
 O jogador escolhe 1 atributo para comparar entre duas cartas e o vencedor é definido com base em quem possui o melhor valor nesse atributo.
 
 Comparacao multipla:
+
 O jogador escolhe 3 atributos para comparar entre duas cartas e o vencedor é definido com base em quem possui os melhores valores nesses atributos.
 
 Como Funciona
@@ -75,11 +77,15 @@ Cada atributo vencido soma 1 ponto para o jogador correspondente.
 Ao final, o programa exibe:
 
 Comparacao unica:
+
 Carta 1 vence, e mostra a comparacao entre as duas
+
 ou
+
 Carta 2 vence, e mostra a comparacao entre as duas
 
 Comparacao multipla:
+
 Jogador 1 venceu
 
 Jogador 2 venceu
